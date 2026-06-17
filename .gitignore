@@ -38,3 +38,6 @@ coverage/
 # Cloudflare / deployment local state
 .wrangler/
 .dev.vars
+
+# Large local source images
+dodoitsu/assets/img01.png

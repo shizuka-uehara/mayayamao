@@ -307,6 +307,13 @@ a {
   border-top-color: transparent;
 }
 
+.dodoitsu-explain-illustration {
+  display: block;
+  width: min(82%, 350px);
+  height: auto;
+  margin: 4px auto 0;
+}
+
 .dodoitsu-video__frame {
   width: 100%;
   aspect-ratio: 16 / 9;
