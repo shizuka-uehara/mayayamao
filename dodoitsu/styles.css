@@ -39,6 +39,10 @@ body::before {
   display: none;
 }
 
+body::after {
+  display: none;
+}
+
 button,
 a {
   font: inherit;
@@ -389,28 +393,46 @@ a {
 
 .dodoitsu-cta {
   display: grid;
-  min-height: 64px;
-  margin-top: 34px;
-  padding: 14px 16px;
-  border: 1px solid rgba(192, 160, 93, 0.82);
+  min-height: 72px;
+  margin-top: 36px;
+  padding: 16px 18px;
+  border: 1px solid rgba(192, 160, 93, 0.46);
+  border-radius: 8px;
   background:
-    linear-gradient(90deg, var(--ink) 0 10px, transparent 10px),
-    linear-gradient(180deg, rgba(192, 160, 93, 0.94), rgba(158, 122, 60, 0.96));
-  color: var(--ink);
-  font-weight: 850;
-  gap: 6px;
+    linear-gradient(135deg, rgba(255, 248, 233, 0.96), rgba(237, 218, 184, 0.9));
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(255, 248, 233, 0.62);
+  color: var(--red-deep);
+  font-weight: 700;
+  gap: 12px;
   text-decoration: none;
   grid-template-columns: 1fr auto;
   align-items: center;
 }
 
+.dodoitsu-cta::after {
+  display: grid;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(158, 122, 60, 0.36);
+  border-radius: 50%;
+  background: rgba(255, 248, 233, 0.72);
+  color: var(--gold);
+  content: "›";
+  font-size: 1.35rem;
+  line-height: 1;
+  place-items: center;
+}
+
 .dodoitsu-cta span:first-child {
   display: grid;
-  gap: 2px;
+  gap: 4px;
 }
 
 .dodoitsu-cta small {
-  font-size: 0.72rem;
+  color: rgba(60, 46, 34, 0.68);
+  font-size: 0.74rem;
   font-weight: 400;
   line-height: 1.35;
 }
@@ -447,9 +469,30 @@ a {
     display: block;
     content: "";
     background:
-      linear-gradient(rgba(33, 27, 18, 0.42), rgba(22, 17, 13, 0.62)),
+      radial-gradient(circle at 30% 12%, rgba(255, 246, 171, 0.42), transparent 34rem),
+      linear-gradient(rgba(116, 76, 12, 0.06), rgba(92, 57, 8, 0.18)),
       url("assets/bk_pc.jpg") center top / cover no-repeat;
-    filter: saturate(0.66) sepia(0.12) brightness(0.84);
+    filter: saturate(0.9) sepia(0.03) brightness(1.03);
+    pointer-events: none;
+  }
+
+  body::after {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    content: "";
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(78, 48, 9, 0.22) 0,
+        rgba(78, 48, 9, 0.22) 1px,
+        rgba(255, 244, 174, 0.18) 2px,
+        transparent 3px,
+        transparent 13.5vw
+      );
+    mix-blend-mode: multiply;
+    opacity: 0.55;
     pointer-events: none;
   }
 
