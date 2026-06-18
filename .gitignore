@@ -41,3 +41,6 @@ coverage/
 
 # Large local source images
 dodoitsu/assets/img01.png
+
+.dev.vars*
+!.dev.vars.example
